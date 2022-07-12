@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2;
+    text-decoration: none;
+    
+}
+
+body{
+    background-color:  #fbfbfb;
+
+}
+
+section{
+    height:100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+
+header{
+    align-items: center;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+    width: 100%;
+    background-color: #fbfbfb;
+}
+
+
+nav{ 
+    font-size: 32px;
+    border-bottom: 10px;
+}
+
+
+.logo{
+    max-width: 120px;
+}
+
+#primer-texto{
+    padding: 100px;
+}
+
+#segundo-texto{
+    background-color: rgba(175, 89, 158, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 600px;
+    justify-content: center;
+}
+
+
+
+/* Para quitar los puntos a los items de listas */
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lista{
+    padding: 10px;
+}
+
+.lista:hover{
+    background-color: rgba(175, 89, 158, 0.3);
+    border-radius: 10%;
+    transition: background-color 0.3s;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.perfil{
+    max-width: 400px;
+    border-radius: 60%;
+    float: left;
+}
+
+#cv{
+    background-color: #af599e;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    color:  #fbfbfb;
+}
+#cv:hover{
+    background-color: rgba(175, 89, 158, 0.8);
+}
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    font-size: 20px;
+}
+
+
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+
+
+
+
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+
+
+h1 {
+    
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p{
+    font-size: 18px;
+    
+}
+
+
+.redes{
+    margin: 20px;
+    width: 60px;
+}
+
+
+.redes:hover{
+    background-color: rgba(175, 89, 158, 0.3);
+    height: 60px;
+    width: 60px;
+    transition: background-color 0.3s;
+}
+
+footer{
+    background-color: #af599e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  #fbfbfb;
+    width: 100%;
+    height: 50px;
+
+}
+
+
+
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
