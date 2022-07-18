@@ -12,6 +12,7 @@
     line-height: 1.2;
     text-decoration: none;
     
+    
 }
 
 body{
@@ -32,11 +33,12 @@ header{
     align-items: center;
     padding: 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     box-shadow: 0 3px 10px -5px #5f5f5f;
     width: 100%;
     background-color: #fbfbfb;
+    margin: 0;
 }
 
 
@@ -44,6 +46,7 @@ header{
 nav{ 
     font-size: 32px;
     border-bottom: 10px;
+        display: none;
 }
 
 
@@ -51,8 +54,25 @@ nav{
     max-width: 120px;
 }
 
+h1{
+    font-size:  36px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 #primer-texto{
-    padding: 100px;
+
+    width: 70%;
+    padding: 10px;
 }
 
 #segundo-texto{
@@ -62,8 +82,12 @@ nav{
     align-items: center;
     border-radius: 10px;
     max-width: 600px;
-    justify-content: center;
+
+    width: 70%;
+    padding: 10px;
+
 }
+
 
 
 
@@ -73,31 +97,72 @@ ul{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+
+    font-size: 20px;
 }
 
-.lista{
-    padding: 10px;
+li.menu-item a {
+    padding: 16px;
+    display: inline-block;
 }
 
-.lista:hover{
-    background-color: rgba(175, 89, 158, 0.3);
-    border-radius: 10%;
+li.menu-item.active {
+    background: #b69bc5;
     transition: background-color 0.3s;
 }
+
+ody.mobile-menu-active img#close-menu {
+	display: block;
+}
+
+body.mobile-menu-active img#open-menu {
+	display: none;
+}
+
+body.mobile-menu-active header {
+	height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+body.mobile-menu-active nav {
+	display: block;
+	width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+body.mobile-menu-active ul#menu {
+	align-items: center;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+body.mobile-menu-active {
+	overflow: hidden;
+}
+
 
 main {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 
 }
 
 .perfil{
-    height: 400px;
+    height: 300px;
     border-radius: 60%;
     float: left;
+    margin: 100px;
 }
 
 #cv{
@@ -114,8 +179,10 @@ main {
 
 #contacto{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction:column;
+
+
 }
 
 a{
@@ -136,19 +203,7 @@ a{
 */
 
 
-h1 {
-    
-    font-size: 48px;
-}
 
-h2 {
-    font-size: 32px;
-}
-
-p{
-    font-size: 18px;
-    
-}
 
 
 .redes{
@@ -175,24 +230,74 @@ footer{
 
 }
 
-@media (max-width:767px){
-    section{display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: center;}
-    h1{font-size: 36px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;}
-    h2{font-size: 28px;}
-    #primer-texto{width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                border-radius: 20px;
-                padding: 10px;
-                margin: 10px;}
-        }
+#menu-hamb {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+}
+
+#cerrar {
+    display: none;
+}
+
+
+
+@media (min-width: 1024px) {
+    h1 {
+    
+        font-size: 48px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    p{
+        font-size: 18px;
+        
+    }
+
+    .menu-item{
+        padding: 10px;
+
+    }
+    
+    .menu-item :hover{
+        background-color: rgba(175, 89, 158, 0.3);
+        border-radius: 10%;
+        transition: background-color 0.3s;
+        padding: 5px;
+    }
+
+    #menu-hamb {
+        display: none;
+    }
+
+    section#inicio {
+        flex-direction: row;
+    }
+
+    p {
+        width: 100%; 
+    }
+
+    article#links li {
+        margin: 32px;
+    }
+
+    .perfil{
+        height: 400px;
+    }
+
+    nav {
+        display: block;
+    }
+
+
+}
+
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
 *    "estilos generales". Una buena idea sería comenzar por el <body> ;)
