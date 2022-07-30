@@ -204,15 +204,15 @@ a{
 
 .redes{
     margin: 20px;
-    width: 60px;
+    width: 70px;
+    padding: 10px;
 }
 
 
 .redes:hover{
     background-color: #0E9594;
-    height: 60px;
-    width: 60px;
     transition: background-color 0.3s;
+    border-radius: 10px;
 }
 
 footer{
